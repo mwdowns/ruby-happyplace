@@ -65,7 +65,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
   dotenv
   pg
   pry

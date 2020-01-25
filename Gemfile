@@ -16,5 +16,4 @@ gem 'pry'
 
 # db
 gem 'pg'
-gem 'activerecord'
 gem 'rake'

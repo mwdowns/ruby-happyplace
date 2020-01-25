@@ -1,6 +1,9 @@
 require 'sinatra'
 require 'dotenv'
 
+# load models
+Dir['./models/*.rb'].each { |f| require_relative f }
+
 Dotenv.load('./.env')
 
 class HappyPlaceApp < Sinatra::Base
@@ -8,5 +11,8 @@ class HappyPlaceApp < Sinatra::Base
 
   get '/' do
     'It works!'
+  end
+
+  post '/graphql' do 
   end
 end
