@@ -2,6 +2,7 @@ require 'sinatra'
 require 'dotenv'
 require 'json'
 require 'rack/contrib'
+require 'pry'
 
 # load models
 Dir['./models/*.rb'].each { |f| require_relative f }
@@ -24,6 +25,6 @@ class HappyPlaceApp < Sinatra::Base
       variables: params[:variables],
       context: { current_user: nil }
     )
-    Json.generate(result)
+    JSON.generate(result.to_h)
   end
 end
