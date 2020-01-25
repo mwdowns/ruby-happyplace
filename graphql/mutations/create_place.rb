@@ -4,11 +4,11 @@ require_relative 'base_mutation'
 class Mutations::CreatePlace < Mutations::BaseMutation
   description 'create a new place object'
 
-  argument: :lat, String, required: true
-  argument: :lon, String, required: true
+  argument :lat, String, required: true
+  argument :lon, String, required: true
 
   field :success, Boolean, null: false
-  field :place, [Types::Place], null: true,
+  field :place, [Types::Place], null: true
   field :errors, String, null: false
 
   def resolve(lat:, lon:)
