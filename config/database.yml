@@ -4,5 +4,5 @@ development:
   encoding: unicode
   pool: 2
   database: happyplace_ruby_db
-  username: ENV['DB_USER']
-  password: ENV['DB_PASSWORD']
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>

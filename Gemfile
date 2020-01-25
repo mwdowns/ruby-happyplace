@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# config
+gem 'dotenv'
+
 # server and routing
 gem 'sinatra'
 gem 'sinatra-activerecord'
