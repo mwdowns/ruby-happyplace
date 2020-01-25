@@ -7,6 +7,7 @@ gem 'dotenv'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'puma'
+gem 'rack-contrib'
 
 # testing
 gem 'rspec'
@@ -17,3 +18,6 @@ gem 'pry'
 # db
 gem 'pg'
 gem 'rake'
+
+# graphql
+gem 'graphql'
