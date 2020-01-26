@@ -19,7 +19,7 @@ class HappyPlaceApp < Sinatra::Base
     'It works!'
   end
 
-  post '/graphql' do 
+  post '/graphql' do
     result = HappyPlaceAppSchema.execute(
       params[:query],
       variables: params[:variables],

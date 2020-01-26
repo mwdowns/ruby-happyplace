@@ -8,7 +8,7 @@ class Mutations::CreatePlace < Mutations::BaseMutation
   argument :lon, String, required: true
 
   field :success, Boolean, null: false
-  field :place, [Types::Place], null: true
+  field :place, Types::Place, null: true
   field :errors, String, null: false
 
   def resolve(lat:, lon:)
