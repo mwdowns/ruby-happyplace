@@ -10,14 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 3) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "happy_places", id: :serial, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "place_id"
+    t.string "message"
+    t.string "media_url"
+  end
 
   create_table "places", id: :serial, force: :cascade do |t|
     t.string "lat"
     t.string "lon"
   end
 
+  create_table "users", id: :serial, force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "password"
+    t.string "password_confirmation"
+  end
+
+  add_foreign_key "happy_places", "places"
+  add_foreign_key "happy_places", "users"
 end
