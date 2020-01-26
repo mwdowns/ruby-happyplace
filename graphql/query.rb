@@ -1,10 +1,12 @@
 require 'graphql'
-Dir['./types/*.rb'].each { |f| require_relative f }
+require_relative './types/place'
+require_relative './types/user'
+require_relative './types/happy_place'
 
 class QueryType < GraphQL::Schema::Object
   description 'The query root of this schema'
 
-  field :users, [Types::Users], null: false do
+  field :users, [Types::User], null: false do
     description 'Get all users'
   end
 

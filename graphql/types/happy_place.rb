@@ -1,8 +1,8 @@
 require 'graphql'
 require_relative './base_object'
 
-class Types::User < Types::BaseObject
-  description 'a user'
+class Types::HappyPlace < Types::BaseObject
+  description 'a happy place'
 
   field :id, ID, null: false
   field :user, Types::User, null: false
